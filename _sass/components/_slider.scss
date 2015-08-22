@@ -460,22 +460,22 @@
   left: 0;
 
   @include MQ(M) {
-    width: 700px;
-    min-width: 700px;
+    width: 768px;
+    min-width: 768px;
     position: relative;
   }
 
 }
 
 .image-container {
-  width: 700px;
+  width: 768px;
   margin: 0px auto;
 }
 
 .shadow {
   @include MQ(M) {
     position: absolute;
-    width: 700px;
+    width: 768px;
     height: 100%;
     top: 0;
     -moz-box-shadow:
@@ -488,5 +488,5 @@
     inset 5px 0 50px 50px #000,
     inset -5px 0 50px 50px #000;
   }
-  
+
 }
