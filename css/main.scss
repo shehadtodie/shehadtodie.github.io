@@ -1,0 +1,126 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// colors
+
+$color-1: #E80C1A; //
+$color-2: #d44457; //
+$color-3: #ffffff; // White
+$background-color: #333333;
+$murderer: 'YouMurderer';
+
+// fonts
+
+$primary-font: 'Open Sans', sans-serif;
+
+// header height
+
+$header-S: 50px;
+$header-M: 70px;
+
+// intro height
+
+$intro-height-S: 250px;
+$intro-height-M: 500px;
+$intro-height-L: 680px;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "bourbon/bourbon";
+@import
+        "mixins",
+        "layout"
+;
+@import "components/slider";
+@import "components/header";
+@import "components/page";
+@import "pages/start";
+@import "pages/about";
+@import "pages/post";
+
+
+@font-face {
+font-family: YouMurderer;
+src: url("/assets/font/youmurderer.otf") format("opentype");
+}
+
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+
+*, *::after, *::before {
+  @include box-sizing(border-box);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: {
+    size: 1.6rem;
+    family: $primary-font; // variables inside partials > _variables.scss
+  }
+  color: $color-1;
+  background-color: $background-color;
+}
+
+body, html {
+  /* important */
+  height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $murderer;
+}
+
+a {
+  color: $color-2;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  z-index: 5;
+}
+
+
+
+/* --------------------------------
+
+Javascript disabled
+
+-------------------------------- */
+.no-js .hero-slider li {
+  display: none;
+
+  &.selected {
+    display: block;
+  }
+}
+
+.no-js .slider-nav {
+  display: none;
+}
+
+.fill {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden
+}
+.fill img {
+  min-height: 100%;
+  width: auto;
+   @include MQ(M) {
+    flex-shrink:0;
+    min-width:100%;
+    min-height:100%
+  }
+}
