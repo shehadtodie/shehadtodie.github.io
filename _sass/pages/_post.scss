@@ -1,3 +1,8 @@
 .post-title {
   font-size: 30px;
+
+ @include MQ(M) {
+ 	font-size: 50px;
+ 
+  }
 }

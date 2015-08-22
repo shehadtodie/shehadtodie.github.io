@@ -69,6 +69,13 @@
     color: $color-3;
   }
 
+  @include MQ(L)
+  {
+    a {
+          font-size:35px;
+    }
+  }
+
   @include MQ(M) {
     /* reset navigation values */
     width: auto;
