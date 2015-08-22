@@ -119,8 +119,6 @@ Javascript disabled
   min-height: 100%;
   width: auto;
    @include MQ(M) {
-    flex-shrink:0;
-    min-width:100%;
-    min-height:100%
+    max-width: 700px;
   }
 }
