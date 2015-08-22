@@ -116,7 +116,6 @@ Javascript disabled
   overflow:hidden
 }
 .fill img {
-  min-height: 100%;
   width: auto;
   @include MQ(M) {
     max-width: 850px;
