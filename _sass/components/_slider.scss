@@ -3,8 +3,12 @@
   @include font-smoothing;
   top: 50px;
   @include MQ(M) {
-    top:0;
+    top:50px;
   }
+    @include MQ(L) {
+    top:0px;
+  }
+
 }
 
 .hero-slider {
@@ -480,13 +484,13 @@
     top: 0;
     -moz-box-shadow:
     inset 5px 0 50px 50px #000,
-    inset -5px 0 50px 50px #000;
+    inset -5px 0 50px -50px #000;
     -webkit-box-shadow:
     inset 5px 0 50px 50px #000,
-    inset -5px 0 50px 50px #000;
+    inset -5px 0 50px -50px #000;
     box-shadow:
     inset 5px 0 50px 50px #000,
-    inset -5px 0 50px 50px #000;
+    inset -5px 0 50px -50px #000;
   }
 
 }
